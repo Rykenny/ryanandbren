@@ -104,17 +104,21 @@ app.post('/rsvp', async (req, res) => {
 
 app.get('/partyData/:partyCode', async (req, res) => {
   const partyCode = req.params.partyCode;
+  console.log('Received party_code:', partyCode);
   const data = await fetchPartyData(partyCode);
   res.json(data);
+  console.log('party_code response:', json(data));
 });
 
 app.get('/health_check', (req, res) => {
   // Add your health check logic here.  For example:
   if (fetchPartyData('test') !== null) {  // Replace db.connected with your actual health check logic
     res.status(200).send('OK');
+    console.log('Health Check Pass')
   } else {
     res.status(500).send('Database connection failed');
-  }
+    console.log('Health Check Fail')
+  };
 });
 
 app.listen(port, () => {
