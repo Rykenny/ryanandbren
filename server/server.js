@@ -114,7 +114,6 @@ app.get('/health_check', (req, res) => {
   // Add your health check logic here.  For example:
   if (fetchPartyData('test') !== null) {  // Replace db.connected with your actual health check logic
     res.status(200).send('OK');
-    console.log('Health Check Pass')
   } else {
     res.status(500).send('Database connection failed');
     console.log('Health Check Fail')
