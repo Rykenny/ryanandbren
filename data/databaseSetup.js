@@ -95,8 +95,7 @@ async function populateTables(){
           `INSERT INTO guests (first_name, last_name, allergies, party_code) 
             VALUES ($1, $2, $3, $4)
             ON CONFLICT(first_name, last_name)
-            DO UPDATE SET
-              allergies = EXCLUDED.allergies`;
+            DO NOTHING`;
         const values = [row['first_name'], row['last_name'], row['allergies'], row['party_code'] ]; // Map CSV columns to table columns
         const insertRecord = client.query(query, values);
         console.log(insertRecord)
