@@ -107,7 +107,7 @@ app.get('/partyData/:partyCode', async (req, res) => {
   console.log('Received party_code:', partyCode);
   const data = await fetchPartyData(partyCode);
   res.json(data);
-  console.log('party_code response:', res.json(data));
+  console.log('party_code response:', JSON.stringify(data));
 });
 
 app.get('/health_check', (req, res) => {
