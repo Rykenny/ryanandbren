@@ -47,32 +47,43 @@ function HomePage() {
       {/* <img src="/engagement-mobile.jpg" alt="Mobile View" className="mobile-image" />
       <img src="/engagement-desktop.jpg" alt="Desktop View" className="desktop-image" /> */}
       <div className="image-container">
-      <img src="/engagement-mobile.jpg" alt="Mobile View" className="mobile-image" />
-  <img src="/engagement-desktop.jpg" alt="Desktop View" className="desktop-image" />
+      <img src="/wedding-mobile.jpg" alt="Mobile View" className="mobile-image" />
+  <img src="/wedding-desktop.jpg" alt="Desktop View" className="desktop-image" />
   <img src="/guest-ill1.png" alt="Guest Illustration" className="guest-illustration" />
 </div>
       
 
-      <h1>Celebrate with us on September 13th!</h1>
+      <h1>Thank you so much for celebrating with us!</h1>
       <p>
-        Thank you so much to everyone who celebrated with us in January - we had so much fun, we decided we should do it all again! 
-        Just kidding, this was the plan all along. We're thrilled to invite you to our wedding on September 13th, 2025 
-        (1 year and 8 months to the day after our first wedding). Enter your code from the invitiation to RSVP!
+        Thank you all so much for celebrating with us for a second time! We had the absolute time of our lives, and we
+        love each and every one of you from the bottom of our hearts.
       </p>
+      <p>
+        Here's all the photos from the day!
+      </p>
+      
+      <div >
+        <a className="photos" target='_blank' rel='noreferrer' href='https://charlieoliviagranthamphotography.pixieset.com/brennaandryan/'>
+          <button>
+           Official photos
+          </button>
+        </a>
+        
+        <a className="photos" target='_blank' rel='noreferrer' href='https://drive.google.com/drive/folders/1qSNGBPPXZCmi_LUwlym1svUwej3SAGd8?usp=drive_link'>
+          <button>
+           Lauren's Camp Snap
+          </button>
+        </a>
 
-      {/* Party code input form */}
-      <form onSubmit={handlePartyCodeSubmit}>
-        <input
-          type="text"
-          value={partyCode}
-          onChange={(event) => setPartyCode(event.target.value)}
-          placeholder="Enter your party code"
-          className="input-field"
-        />
-        <button type="submit">RSVP</button>
-        {/* Display error message if party code is invalid */}
-        {invalidCodeError && <p className="error-message">{invalidCodeError}</p>}
-      </form>
+        <a className="photos" target='_blank' rel='noreferrer' href='https://photos.app.goo.gl/cWZpKsbKRDwwCy7n9'>
+          <button>
+           David's Photos
+          </button>
+        </a>
+      </div>
+
+     
+    
       </div>
     </div>
   );

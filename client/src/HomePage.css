@@ -32,6 +32,7 @@
 }
 
 
+
 /* Hide the desktop image on mobile screens */
 .mobile-image {
   display: none;
@@ -44,6 +45,18 @@
   max-width: 800px;  /* Limit the size of the desktop image */
   width: 100%;       /* Make the desktop image responsive */
   height: auto;
+}
+
+button {
+  padding: 12px 20px;
+  margin: 16px;
+  background-color: #967B51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 /* Link styling */
