@@ -20,24 +20,8 @@ const Navbar = () => {
       >
         Ryan & Brenna
       </Link> 
-      <div className="hamburger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-      {isMenuOpen && (
-        <div
-          className={`overlay ${isMenuOpen ? 'open' : ''}`}
-          onClick={() => setIsMenuOpen(false)}
-        ></div>
-      )}
-      <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
-        <button className="close-button" onClick={() => setIsMenuOpen(false)}>
-          &times;
-        </button>
-        <Link to="/gifts" onClick={closeMobileMenu}>Gifts</Link>
-        <Link to="/faq-container" onClick={closeMobileMenu} rel="noopener noreferrer">FAQs</Link>
-      </div>
+      
+      
     </nav>
   );
 };
